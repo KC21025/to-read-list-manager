@@ -1,83 +1,176 @@
 <mxfile host="65bd71144e">
     <diagram id="lZ1eAuXQBliSHBD4Oc36" name="Page-1">
-        <mxGraphModel dx="1048" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1572" dy="1130" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="30" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="1">
-                    <mxGeometry x="15" y="20" width="585" height="820" as="geometry"/>
+                <mxCell id="46" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="70" width="680" height="820" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;whiteSpace=wrap;" vertex="1" parent="30">
+                <mxCell id="47" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;whiteSpace=wrap;" parent="46" vertex="1">
                     <mxGeometry x="60" y="12" width="110" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="https://www.booklog.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="30">
+                <mxCell id="48" value="https://www.booklog.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" parent="46" vertex="1">
                     <mxGeometry x="130" y="60" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
-                    <mxGeometry y="110" width="585" height="40" as="geometry"/>
+                <mxCell id="49" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="46" vertex="1">
+                    <mxGeometry y="110" width="680" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Book Log&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="30">
+                <mxCell id="50" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Book Log&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="46" vertex="1">
                     <mxGeometry y="115" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="Quick Add" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="30">
-                    <mxGeometry x="15" y="180" width="150" height="50" as="geometry"/>
+                <mxCell id="51" value="Manage Books" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" parent="46" vertex="1">
+                    <mxGeometry x="320" y="117.5" width="140" height="25" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="Quick Stats" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="30">
-                    <mxGeometry x="15" y="260" width="150" height="50" as="geometry"/>
+                <mxCell id="52" value="Stats" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" parent="46" vertex="1">
+                    <mxGeometry x="480" y="117.5" width="107.5" height="25" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
-                    <mxGeometry x="180" y="180" width="390" height="630" as="geometry"/>
+                <mxCell id="53" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="46" vertex="1">
+                    <mxGeometry x="30" y="180" width="610" height="630" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
-                    <mxGeometry x="180" y="180" width="390" height="40" as="geometry"/>
+                <mxCell id="54" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="46" vertex="1">
+                    <mxGeometry x="30" y="180" width="610" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Book&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="30">
-                    <mxGeometry x="185" y="185" width="60" height="30" as="geometry"/>
+                <mxCell id="55" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Book&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="46" vertex="1">
+                    <mxGeometry x="60" y="185" width="45" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Title&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="30">
-                    <mxGeometry x="255" y="185" width="60" height="30" as="geometry"/>
+                <mxCell id="56" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Title&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="46" vertex="1">
+                    <mxGeometry x="140" y="185" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Author&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="30">
-                    <mxGeometry x="325" y="185" width="60" height="30" as="geometry"/>
+                <mxCell id="57" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Author&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="46" vertex="1">
+                    <mxGeometry x="230" y="185" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="1">
-                    <mxGeometry x="25" y="30" width="585" height="820" as="geometry"/>
+                <mxCell id="58" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Status&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="46" vertex="1">
+                    <mxGeometry x="340" y="185" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;whiteSpace=wrap;" vertex="1" parent="46">
+                <mxCell id="59" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Progress&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
+                    <mxGeometry x="440" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Rating&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
+                    <mxGeometry x="547.5" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="46">
+                    <mxGeometry x="30" y="220" width="610" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="46">
+                    <mxGeometry x="30" y="250" width="600" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.navigation.scrollBar;strokeColor=#999999;barPos=20;fillColor2=#99ddff;strokeColor2=none;direction=north;" vertex="1" parent="46">
+                    <mxGeometry x="620" y="220" width="20" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Home&lt;/font&gt;" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#007FFF;whiteSpace=wrap;" vertex="1" parent="46">
+                    <mxGeometry x="197.5" y="117.5" width="107.5" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="70" width="680" height="820" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;whiteSpace=wrap;" vertex="1" parent="103">
                     <mxGeometry x="60" y="12" width="110" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="https://www.booklog.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="46">
+                <mxCell id="105" value="https://www.booklog.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="103">
                     <mxGeometry x="130" y="60" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="46">
-                    <mxGeometry y="110" width="585" height="40" as="geometry"/>
+                <mxCell id="106" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="103">
+                    <mxGeometry y="110" width="680" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Book Log&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
+                <mxCell id="107" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Book Log&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="103">
                     <mxGeometry y="115" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="51" value="Quick Add" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="46">
-                    <mxGeometry x="15" y="180" width="115" height="50" as="geometry"/>
+                <mxCell id="108" value="Manage Books" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#007FFF;whiteSpace=wrap;" vertex="1" parent="103">
+                    <mxGeometry x="320" y="117.5" width="140" height="25" as="geometry"/>
                 </mxCell>
-                <mxCell id="52" value="Quick Stats" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="46">
-                    <mxGeometry x="15" y="260" width="115" height="50" as="geometry"/>
+                <mxCell id="109" value="Stats" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="103">
+                    <mxGeometry x="480" y="117.5" width="107.5" height="25" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="46">
-                    <mxGeometry x="180" y="180" width="390" height="630" as="geometry"/>
+                <mxCell id="110" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="103">
+                    <mxGeometry x="30" y="180" width="610" height="630" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="46">
-                    <mxGeometry x="180" y="180" width="390" height="40" as="geometry"/>
+                <mxCell id="111" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="103">
+                    <mxGeometry x="30" y="180" width="610" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Book&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
-                    <mxGeometry x="185" y="185" width="60" height="30" as="geometry"/>
+                <mxCell id="112" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Book&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="103">
+                    <mxGeometry x="60" y="185" width="45" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Title&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
-                    <mxGeometry x="255" y="185" width="60" height="30" as="geometry"/>
+                <mxCell id="113" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Title&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="103">
+                    <mxGeometry x="140" y="185" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Author&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
-                    <mxGeometry x="325" y="185" width="60" height="30" as="geometry"/>
+                <mxCell id="114" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Author&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="103">
+                    <mxGeometry x="230" y="185" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Status&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
-                    <mxGeometry x="395" y="185" width="60" height="30" as="geometry"/>
+                <mxCell id="115" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Status&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="103">
+                    <mxGeometry x="340" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Progress&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="103">
+                    <mxGeometry x="440" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Rating&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="103">
+                    <mxGeometry x="547.5" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="103">
+                    <mxGeometry x="30" y="220" width="610" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.navigation.scrollBar;strokeColor=#999999;barPos=20;fillColor2=#99ddff;strokeColor2=none;direction=north;" vertex="1" parent="103">
+                    <mxGeometry x="620" y="220" width="20" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="Home" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="103">
+                    <mxGeometry x="197.5" y="117.5" width="107.5" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="1480" y="70" width="680" height="820" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;whiteSpace=wrap;" vertex="1" parent="122">
+                    <mxGeometry x="60" y="12" width="110" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="https://www.booklog.com" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="122">
+                    <mxGeometry x="130" y="60" width="250" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="122">
+                    <mxGeometry y="110" width="680" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Book Log&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="122">
+                    <mxGeometry y="115" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="Manage Books" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="122">
+                    <mxGeometry x="320" y="117.5" width="140" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="Stats" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#007FFF;whiteSpace=wrap;" vertex="1" parent="122">
+                    <mxGeometry x="480" y="117.5" width="107.5" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="122">
+                    <mxGeometry x="30" y="180" width="610" height="630" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="122">
+                    <mxGeometry x="30" y="180" width="610" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Book&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="122">
+                    <mxGeometry x="60" y="185" width="45" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Title&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="122">
+                    <mxGeometry x="140" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Author&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="122">
+                    <mxGeometry x="230" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Status&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="122">
+                    <mxGeometry x="340" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Progress&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="122">
+                    <mxGeometry x="440" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Rating&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="122">
+                    <mxGeometry x="547.5" y="185" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="122">
+                    <mxGeometry x="30" y="220" width="610" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="122">
+                    <mxGeometry x="30" y="250" width="600" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.navigation.scrollBar;strokeColor=#999999;barPos=20;fillColor2=#99ddff;strokeColor2=none;direction=north;" vertex="1" parent="122">
+                    <mxGeometry x="620" y="220" width="20" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="Home" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.buttons.button;strokeColor=#666666;fontColor=#ffffff;mainText=;buttonStyle=round;fontSize=17;fontStyle=1;fillColor=#008cff;whiteSpace=wrap;" vertex="1" parent="122">
+                    <mxGeometry x="197.5" y="117.5" width="107.5" height="25" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
