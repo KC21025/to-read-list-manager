@@ -21,3 +21,7 @@ CREATE TABLE Item (
     FOREIGN KEY (Author_ID) REFERENCES Author(Author_ID),
     FOREIGN KEY (Status_ID) REFERENCES Status(Status_ID)
 );
+
+INSERT INTO Status (Status_ID, Status_Name) Values (1, 'Reading'),
+INSERT INTO Status (Status_ID, Status_Name) Values (2, 'Completed')
+INSERT INTO Status (Status_ID, Status_Name) Values (3, 'To Read'),
