@@ -28,9 +28,9 @@ CREATE TABLE Status (
 CREATE TABLE Item (
     Item_ID INTEGER PRIMARY KEY,
     Author_ID INTEGER,
-    Status_ID INTEGER,
-    Title TEXT,
-    Total_Pages INTEGER,
+    Status_ID INTEGER DEFAULT 3, -- Default to 'To Read'
+    Title TEXT NOT NULL,
+    Total_Pages INTEGER NOT NULL,
     Pages_Read INTEGER,
     Date_Started DATE,
     Date_Finished DATE,
