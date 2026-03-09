@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS Status;
 
 CREATE TABLE Author (
     Author_ID INTEGER PRIMARY KEY,
-    Author_Name TEXT
+    Author_Name TEXT NOT NULL
 );
 
 /*
@@ -18,7 +18,7 @@ CREATE TABLE Author (
 
 CREATE TABLE Status (
     Status_ID INTEGER PRIMARY KEY,
-    Status_Name TEXT
+    Status_Name TEXT NOT NULL
 );
 
 /*
@@ -30,11 +30,11 @@ CREATE TABLE Item (
     Author_ID INTEGER,
     Status_ID INTEGER DEFAULT 3, -- Default to 'To Read'
     Title TEXT NOT NULL,
-    Total_Pages INTEGER NOT NULL,
-    Pages_Read INTEGER,
+    Total_Pages INTEGER NOT NULL Check (typeof(Total_Pages) = 'integer'),
+    Pages_Read INTEGER Check (Pages_Read >= 0 and Pages_Read <= Total_Pages),
     Date_Started DATE,
     Date_Finished DATE,
-    Rating NUMBER,
+    Rating NUMBER Check (Rating >= 0 and Rating <= 5),
     FOREIGN KEY (Author_ID) REFERENCES Author(Author_ID),
     FOREIGN KEY (Status_ID) REFERENCES Status(Status_ID)
 );
