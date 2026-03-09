@@ -1,3 +1,7 @@
+/*
+-- Drops tables if they already exist to avoid errors when running the database setup multiple times
+*/
+
 DROP TABLE IF EXISTS Item;
 DROP TABLE IF EXISTS Author;
 DROP TABLE IF EXISTS Status;
