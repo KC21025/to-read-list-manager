@@ -21,8 +21,6 @@ print("Database setup complete.")
 # Created a cursor to execute SQL commands
 cursor = connection.cursor()
 
-cursor.execute("INSERT INTO Item (Author_ID, Title, Total_Pages, Rating) VALUES (999, 'The Great Gatsby', 70, 4)")
-
 # Check if status is inserted correctly by selecting all from Status table
 cursor.execute("SELECT * FROM Status")
 
