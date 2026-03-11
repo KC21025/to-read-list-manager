@@ -12,7 +12,7 @@ def get_db_connection():
 @app.route('/') # Define a route for root url
 def index():
     conn = get_db_connection() # Getting database connection
-    books = conn.execute("SELECT * FROM Item").fetchall() # Execute SQL query selecting all records from Item table
+    books = conn.execute("SELECT Item.*, Author.Author_Name, Status.Status_Name FROM Item JOIN Author ON Item.Author_ID = Author.Author_ID JOIN Status ON Item.Status_ID = Status.Status_ID").fetchall() # Execute SQL query selecting all records from Item table
     conn.close() # Closing the database connection
     return render_template('index.html', books=books) # Render the index.html template and pass books variable to it
 
