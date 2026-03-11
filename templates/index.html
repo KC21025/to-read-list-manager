@@ -7,12 +7,14 @@
     </head>
 
     <body>
-        <h1>Book log</h1>
+        <h1>Book log</h1> # Website title
 
         <ul>
             {% for book in books %}
-                <li>{{ book.title }} by {{ book.author }}</li>
+                <li>
+                    <strong>{{ book.title }} by {{ book.author }}</strong>
+                </li>
             {% endfor %}
         </ul>
-        
+
     </body>
