@@ -50,3 +50,7 @@ CREATE TABLE Item (
 INSERT INTO Status (Status_ID, Status_Name) Values (1, 'Reading');
 INSERT INTO Status (Status_ID, Status_Name) Values (2, 'Completed');
 INSERT INTO Status (Status_ID, Status_Name) Values (3, 'To Read');
+
+INSERT INTO Author (Author_ID, Author_Name) Values (1, 'J.K. Rowling');
+
+INSERT INTO Item (Item_ID, Author_ID, Status_ID, Title, Total_Pages, Pages_Read, Date_Started, Date_Finished, Rating) Values (1, 1, 3, 'Harry Potter and the Sorcerer''s Stone', 309, 309, '2024-01-01', '2024-01-15', 5);
