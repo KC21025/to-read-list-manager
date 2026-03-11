@@ -16,5 +16,12 @@ def index():
     conn.close() # Closing the database connection
     return render_template('index.html', books=books) # Render the index.html template and pass books variable to it
 
+@app.route('/manage') # Define a route for manage url
+def manage():
+    conn = get_db_connection() # Getting database connection
+    books = conn.execute("SELECT Item.*, Author.Author_Name, Status.Status_Name FROM Item JOIN Author On Item.Author_ID = Author.Author_ID JOIN Status ON Item.Status_ID = Status.Status_ID").fetchall() # Execute SQL query selecting all records from Item table
+    conn.close() # Closing the database connection
+    return render_template('manage.html', books=books)  # Render the manage.html template and pass books variable to it
+
 if __name__ == '__main__':
     app.run(debug=True) # Run the Flask application in debug mode

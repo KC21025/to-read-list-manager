@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Book Log</title>
+        <title>Manage Books</title>
     </head>
 
     <body>
-        <a href="manage.html">Manage Books</a>
-        <h1>Book log</h1> # Website title
+        <h1>Manage Books</h1> # Page title
 
         <ul>
             {% for book in books %}
                 <li>
-                    <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
+                    <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }}</strong>
                 </li>
             {% endfor %}
         </ul>
 
     </body>
+</html>
