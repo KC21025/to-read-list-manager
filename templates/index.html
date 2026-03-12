@@ -7,17 +7,16 @@
     </head>
 
     <body>
-        <a href="/">Home</a>
-        <a href="/manage">Manage Books</a>
-        <a href="/stats">Stats</a>
-        <h1>Book log</h1> # Website title
+        {% extends "layout.html" %}
+        {% block content %}
+            <h1>Book log</h1> # Website title
 
-        <ul>
-            {% for book in books %}
-                <li>
-                    <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
-                </li>
-            {% endfor %}
-        </ul>
-
+            <ul>
+                {% for book in books %}
+                    <li>
+                        <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endblock %}
     </body>

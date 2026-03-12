@@ -7,9 +7,8 @@
     </head>
 
     <body>
-        <a href="/">Home</a>
-        <a href="/manage">Manage Books</a>
-        <a href="/stats">Stats</a>
+        {% extends "layout.html" %}
+        {% block content %}
         <h1>Stats</h1> # Page title
 
         <ul>
@@ -17,3 +16,5 @@
             <li>Books to Read: {{ books_to_read[0] }}</li>
             <li>Books Reading: {{ books_reading[0] }}</li>
         </ul>
+        {% endblock %}
+    </body>
