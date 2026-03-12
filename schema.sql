@@ -34,6 +34,7 @@ CREATE TABLE Item (
     Author_ID INTEGER,
     Status_ID INTEGER DEFAULT 3, -- Default to 'To Read'
     Title TEXT NOT NULL,
+    Book_Description TEXT,
     Total_Pages INTEGER NOT NULL Check (typeof(Total_Pages) = 'integer'),
     Pages_Read INTEGER Check (Pages_Read >= 0 and Pages_Read <= Total_Pages),
     Date_Started DATE,
@@ -53,4 +54,4 @@ INSERT INTO Status (Status_ID, Status_Name) Values (3, 'To Read');
 
 INSERT INTO Author (Author_ID, Author_Name) Values (1, 'J.K. Rowling');
 
-INSERT INTO Item (Item_ID, Author_ID, Status_ID, Title, Total_Pages, Pages_Read, Date_Started, Date_Finished, Rating) Values (1, 1, 3, 'Harry Potter and the Sorcerer''s Stone', 309, 309, '2024-01-01', '2024-01-15', 5);
+INSERT INTO Item (Item_ID, Author_ID, Status_ID, Title, Book_Description, Total_Pages, Pages_Read, Date_Started, Date_Finished, Rating) Values (1, 1, 3, 'Harry Potter and the Sorcerer''s Stone', 'A young wizard discovers his magical heritage.', 309, 303, '2024-01-01', '2024-01-15', 5);
