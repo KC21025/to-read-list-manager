@@ -1,24 +1,12 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manage Books</title>
-    </head>
+        {% extends "layout.html" %} # Extending base layout
+        {% block content %} # Starting content block
 
-    <body>
-      {% extends "layout.html" %}
-      {% block content %}
-            <h1>Manage Books</h1> # Page title
-
-        <ul>
-            {% for book in books %}
-                <li>
-                    <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }}</strong>
-                </li>
-            {% endfor %}
-        </ul>
-
-      {% endblock %}
+            <ul>
+                {% for book in books %}
+                    <li>
+                        <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endblock %} # Ending content block
     </body>
-</html>

@@ -3,15 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Book Log{% endblock %}</title>
+        <title>Book Log</title>
+        <link rel="stylesheet" href="styles.css"> # Link to external CSS file
     </head>
 
     <body>
-        <nav>
-            <a href="/">Home</a>
+        <nav> # Navigation bar
+            <a href="/">Home</a> 
             <a href="/manage">Manage Books</a>
             <a href="/stats">Stats</a>
         </nav>
+
         {% block content %}
         {% endblock %}
     </body>

@@ -1,22 +1,18 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Book Log</title>
-    </head>
-
-    <body>
-        {% extends "layout.html" %}
-        {% block content %}
-            <h1>Book log</h1> # Website title
-
+        {% extends "layout.html" %} # Extending base layout
+        {% block content %} # Starting content block
+ 
             <ul>
                 {% for book in books %}
                     <li>
-                        <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
+                        <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} - {{ book.date_started }} </strong>
                     </li>
                 {% endfor %}
             </ul>
-        {% endblock %}
+
+                {% for book in books %}
+                        <h1>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} - {{ book.date_started }}</h1>
+                {% endfor %}
+   
+
+        {% endblock %} # Ending content block
     </body>
