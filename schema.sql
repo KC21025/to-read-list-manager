@@ -55,3 +55,4 @@ INSERT INTO Status (Status_ID, Status_Name) Values (3, 'To Read');
 INSERT INTO Author (Author_ID, Author_Name) Values (1, 'J.K. Rowling');
 
 INSERT INTO Item (Item_ID, Author_ID, Status_ID, Title, Book_Description, Total_Pages, Pages_Read, Date_Started, Date_Finished, Rating) Values (1, 1, 3, 'Harry Potter and the Sorcerer''s Stone', 'A young wizard discovers his magical heritage.', 309, 303, '2024-01-01', '2024-01-15', 5);
+INSERT INTO Item (Item_ID, Author_ID, Status_ID, Title, Book_Description, Total_Pages, Pages_Read, Date_Started, Date_Finished, Rating) Values (2, 1, 1, 'Harry Potter and the Chamber of Secrets', 'The second year at Hogwarts brings new challenges.', 341, 150, '2024-02-01', NULL, NULL);
