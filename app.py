@@ -1,6 +1,6 @@
 import sqlite3 # Import sqlite3 module 
 import flask # Import Flask 
-from flask import Flask, render_template # import Flask and render_template from flask
+from flask import Flask, render_template, request, redirect, url_for # import Flask and render_template from flask
 
 app = Flask(__name__) # Creating a Flask application
 
@@ -31,6 +31,29 @@ def stats():
     books_reading = conn.execute("SELECT Count(Item.Status_ID) FROM ITEM where Status_ID = 1").fetchall()[0]
     conn.close() # Closing the database connection
     return render_template('stats.html', total_books=total_books, books_to_read=books_to_read, books_reading=books_reading)
+
+@app.route('/add_book', methods=['POST']) # Define a route for add url with POST method
+def add_book():
+    title = request.form['title'] # Get the title from the form
+    author_name = request.form['author_name'] # Get the author name from the form
+    total_pages = request.form['total_pages'] # Get the total pages from the form
+    status_id = 3  # Default to 'To Read' status
+    
+    conn = get_db_connection() # Getting database connection
+    author = conn.execute("SELECT Author_ID FROM Author WHERE Author_Name = ?", (author_name,)).fetchone()
+
+    if author:
+        author_id = author['Author_ID']
+    else:
+        cur = conn.execute("INSERT INTO Author (Author_Name) VALUES (?)", (author_name,))
+        conn.commit()
+        author_id = cur.lastrowid
+
+    conn.execute("INSERT INTO Item (Title, Author_ID, Status_ID, Total_Pages) VALUES (?, ?, ?, ?)", (title, author_id, status_id, total_pages)) # Execute SQL query to insert a new record into Item table
+    conn.commit() # Commit the changes to the database
+    conn.close() # Closing the database connection
+    return redirect(url_for('manage')) # Redirect to the manage page after adding a book
+
 
 if __name__ == '__main__':
     app.run(debug=True) # Run the Flask application in debug mode
