@@ -3,11 +3,15 @@
 
             <ul>
                 {% for book in books %}
-                    <li>
+                    <li data-id="{{ book.item_id }}" >
                         <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
                     </li>
                 {% endfor %}
             </ul>
+
+            <div id="bookDisplay"> <!-- This div will be used to display book details when a book is clicked -->
+                
+            </div>
 
             <button id="openModal">Add New Book</button> <!-- Button to open modal to add a new book -->
 
