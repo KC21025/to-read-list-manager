@@ -95,6 +95,8 @@ def edit_book(book_id):
         pages_read = request.form['pages_read']
         total_pages = request.form['total_pages']
         rating = request.form['rating']
+        date_started = request.form['date_started']
+        date_finished = request.form['date_finished']
         description = request.form['description']
         author = conn.execute("SELECT Author_ID FROM Author WHERE Author_Name = ?", (author_name,)).fetchone()
 
@@ -105,7 +107,7 @@ def edit_book(book_id):
             conn.commit()
             author_id = cur.lastrowid
 
-        conn.execute("UPDATE Item SET Title = ?, Author_ID = ?, Status_ID = ?, Pages_Read = ?, Total_Pages = ?, Rating = ?, Book_Description = ? WHERE Item_ID = ?", (title, author_id, status_id, pages_read, total_pages, rating, description, book_id))
+        conn.execute("UPDATE Item SET Title = ?, Author_ID = ?, Status_ID = ?, Pages_Read = ?, Total_Pages = ?, Rating = ?,Date_Started = ?, Date_Finished = ?, Book_Description = ? WHERE Item_ID = ?", (title, author_id, status_id, pages_read, total_pages, rating, date_started, date_finished, description, book_id))
         conn.commit()
         return redirect(url_for('manage'))
     finally:

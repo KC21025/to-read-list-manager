@@ -45,6 +45,8 @@ for (let item of bookItems) {
                     '<input type="number" name="pages_read" placeholder="Pages Read" value="' + data.book.Pages_Read + '" min="0"><br>' +
                     '<input type="number" name="total_pages" placeholder="Total Pages" value="' + data.book.Total_Pages + '" min="1"><br>' +
                     '<input type="number" name="rating" placeholder="Rating (1-5)" value="' + data.book.Rating + '" min="1" max="5"><br>' +
+                    '<input type="date" name="date_started" placeholder="Date Started" value="' + data.book.Date_Started + '"><br>' +
+                    '<input type="date" name="date_finished" placeholder="Date Finished" value="' + data.book.Date_Finished + '"><br>' +
                     '<input type="text" name="description" placeholder="Description" value="' + (data.book.Book_Description || '') + '"><br>' +
                     '<button type="submit">Save Changes</button></form></div>' +
                     '<button id="deleteBtn">Delete</button>';
