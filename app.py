@@ -73,7 +73,7 @@ def get_book(book_id): # Define a function to get a book by its ID
         else: # If book does not exist, return error message
             return flask.jsonify({'error': 'Book not found'}), 404
     finally:
-        conn.close()
+        conn.close() # Closing the database connection
 
 @app.route('/delete_book/<int:book_id>', methods=['POST']) # Define a route for delete_book url with POST method and book_id as a perimeter
 def delete_book(book_id): # Define a function to delete a book by its ID
@@ -83,12 +83,12 @@ def delete_book(book_id): # Define a function to delete a book by its ID
         conn.commit()
         return flask.jsonify({'success': True})
     finally:
-        conn.close()
+        conn.close() # Closing the database connection
 
 @app.route('/edit_book/<int:book_id>', methods=['POST'])
-def edit_book(book_id):
-    conn = get_db_connection()
-    try:
+def edit_book(book_id): # Defining a function to edit the book by its ID
+    conn = get_db_connection() # Geting database connection
+    try: # Requesting the form data from the edit book form and storing it into variables
         title = request.form['title']
         author_name = request.form['author']
         status_id = request.form['status']
@@ -98,20 +98,20 @@ def edit_book(book_id):
         date_started = request.form['date_started']
         date_finished = request.form['date_finished']
         description = request.form['description']
-        author = conn.execute("SELECT Author_ID FROM Author WHERE Author_Name = ?", (author_name,)).fetchone()
+        author = conn.execute("SELECT Author_ID FROM Author WHERE Author_Name = ?", (author_name,)).fetchone() # Finds if Author ID already exists
 
         if author:
-            author_id = author['Author_ID']
+            author_id = author['Author_ID'] # If Author ID exists, use existing Author ID
         else:
             cur = conn.execute("INSERT INTO Author (Author_Name) VALUES (?)", (author_name,))
-            conn.commit()
-            author_id = cur.lastrowid
+            conn.commit() # Committing the changes to the database after inserting a new Author
+            author_id = cur.lastrowid # Adding author if it does not exist and getting the new Author ID from the last row
 
-        conn.execute("UPDATE Item SET Title = ?, Author_ID = ?, Status_ID = ?, Pages_Read = ?, Total_Pages = ?, Rating = ?,Date_Started = ?, Date_Finished = ?, Book_Description = ? WHERE Item_ID = ?", (title, author_id, status_id, pages_read, total_pages, rating, date_started, date_finished, description, book_id))
-        conn.commit()
-        return redirect(url_for('manage'))
+        conn.execute("UPDATE Item SET Title = ?, Author_ID = ?, Status_ID = ?, Pages_Read = ?, Total_Pages = ?, Rating = ?,Date_Started = ?, Date_Finished = ?, Book_Description = ? WHERE Item_ID = ?", (title, author_id, status_id, pages_read, total_pages, rating, date_started, date_finished, description, book_id)) # Updating the book with the values from the form
+        conn.commit() # Committing the changes to the database after updating the book
+        return redirect(url_for('manage')) # Returning to the manage page after editing the book
     finally:
-        conn.close()
+        conn.close() # Closing the database connection
     
 
     
