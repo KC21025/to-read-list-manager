@@ -62,7 +62,7 @@ for (let item of bookItems) { // Looping through each book item, adding click ev
                 const deleteButton = document.getElementById("deleteBtn");
                 deleteButton.onclick = function() { // On click of delete button, delete and POST request to delete_book route in app.py with book ID as parameter, and confirm before deletion
                     if (confirm("Are you sure you want to delete this book?")) {
-                        fetch('/delete_book/' + bookId, {method: "POST"})
+                        fetch('/delete_book/' + bookId, {method: "POST"}) // Send POST request to delete_book route in app.py with the book ID as a parameter to delete it from the database
                             .then(response => response.json())
                             .then(data => {
                                 if (data.success) { // If delete successful, alert user and reload page
