@@ -34,20 +34,20 @@ for (let item of bookItems) { // Looping through each book item, adding click ev
                     // Form for editing book details, prefilled with current book details, and button to submit the form to edit_book route in app.py with book ID as a parameter
                     '<div id="editForm" style="display:none;">' + 
                     '<span class="closeEditForm">&times;</span>' +
-                    '<form id="editBookForm" method="POST" action="/edit_book/' + bookId + '">' +
-                    '<input type="text" name="title" placeholder="Title" value="' + data.book.Title + '" required><br>' +
-                    '<input type="text" name="author" placeholder="Author" value="' + data.book.Author_Name + '" required><br>' +
+                    '<form id="editBookForm" method="POST" action="/edit_book/' + bookId + '">' + 'Book Title: ' +
+                    '<input type="text" name="title" placeholder="Title" value="' + data.book.Title + '" required><br>' + 'Author Name: ' +
+                    '<input type="text" name="author" placeholder="Author" value="' + data.book.Author_Name + '" required><br>' + 'Status: ' +
                     '<select name="status" required>' +
                     '<option value="">Select Status</option>' +
                     '<option value="1" ' + (data.book.Status_ID == 1 ? 'selected' : '') + '>Reading</option>' +
                     '<option value="2" ' + (data.book.Status_ID == 2 ? 'selected' : '') + '>Completed</option>' +
                     '<option value="3" ' + (data.book.Status_ID == 3 ? 'selected' : '') + '>To Read</option>' +
-                    '</select><br>' +
-                    '<input type="number" name="pages_read" placeholder="Pages Read" value="' + data.book.Pages_Read + '" min="0"><br>' +
-                    '<input type="number" name="total_pages" placeholder="Total Pages" value="' + data.book.Total_Pages + '" min="1"><br>' +
-                    '<input type="number" name="rating" placeholder="Rating (1-5)" value="' + data.book.Rating + '" min="1" max="5"><br>' +
-                    '<input type="date" name="date_started" placeholder="Date Started" value="' + data.book.Date_Started + '"><br>' +
-                    '<input type="date" name="date_finished" placeholder="Date Finished" value="' + data.book.Date_Finished + '"><br>' +
+                    '</select><br>' + 'Pages Read: ' +
+                    '<input type="number" name="pages_read" placeholder="Pages Read" value="' + data.book.Pages_Read + '" min="0"><br>' + 'Total Pages: ' +
+                    '<input type="number" name="total_pages" placeholder="Total Pages" value="' + data.book.Total_Pages + '" min="1"><br>' + 'Rating: ' +
+                    '<input type="number" name="rating" placeholder="Rating (1-5)" value="' + data.book.Rating + '" min="1" max="5"><br>' + 'Date Started: ' +
+                    '<input type="date" name="date_started" placeholder="Date Started" value="' + data.book.Date_Started + '"><br>' + 'Date Finished: ' +
+                    '<input type="date" name="date_finished" placeholder="Date Finished" value="' + data.book.Date_Finished + '"><br>' + 'Description: ' +
                     '<input type="text" name="description" placeholder="Description" value="' + (data.book.Book_Description || '') + '"><br>' +
                     '<button type="submit">Save Changes</button></form></div>' +
                     '<button id="deleteBtn">Delete</button>';

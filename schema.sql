@@ -35,11 +35,11 @@ CREATE TABLE Item (
     Status_ID INTEGER DEFAULT 3, -- Default to 'To Read'
     Title TEXT NOT NULL,
     Book_Description TEXT,
-    Total_Pages INTEGER NOT NULL Check (typeof(Total_Pages) = 'integer'),
-    Pages_Read INTEGER Check (Pages_Read >= 0 and Pages_Read <= Total_Pages),
+    Total_Pages INTEGER NOT NULL CHECK (typeof(Total_Pages) = 'integer'),
+    Pages_Read INTEGER CHECK (Pages_Read >= 0 AND Pages_Read <= Total_Pages) DEFAULT 0,
     Date_Started DATE,
-    Date_Finished DATE,
-    Rating NUMBER Check (Rating >= 0 and Rating <= 5),
+    Date_Finished DATE DEFAULT (NULL),
+    Rating INTEGER CHECK (Rating >= 0 AND Rating <= 5) DEFAULT 0,
     FOREIGN KEY (Author_ID) REFERENCES Author(Author_ID),
     FOREIGN KEY (Status_ID) REFERENCES Status(Status_ID)
 );

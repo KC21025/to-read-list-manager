@@ -43,6 +43,9 @@ def add_book():
     title = request.form['title'] # Get the title from the form
     author_name = request.form['author_name'] # Get the author name from the form
     total_pages = request.form['total_pages'] # Get the total pages from the form
+    date = request.form['date_started'] # Get the date started from the form
+    description = request.form['description'] # Get the book description from the form
+
     status_id = 3  # Default to 'To Read' status
     
     conn = get_db_connection() # Getting database connection
@@ -56,7 +59,7 @@ def add_book():
             conn.commit()
             author_id = cur.lastrowid # Get the last inserted Author_ID
 
-        conn.execute("INSERT INTO Item (Title, Author_ID, Status_ID, Total_Pages) VALUES (?, ?, ?, ?)", (title, author_id, status_id, total_pages)) # Execute SQL query to insert a new record into Item table
+        conn.execute("INSERT INTO Item (Title, Author_ID, Status_ID, Total_Pages, Date_Started, Book_Description) VALUES (?, ?, ?, ?, ?, ?)", (title, author_id, status_id, total_pages, date, description)) # Execute SQL query to insert a new record into Item table
         conn.commit() # Commit the changes to the database
         return redirect(url_for('manage')) # Redirect to the manage page after adding a book
     finally:

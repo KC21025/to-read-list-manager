@@ -1,0 +1,23 @@
+/* Styles for the body */
+body {
+    margin: 0;
+    padding: 25px;
+    overflow: hidden
+}
+
+/* Index HTML */
+/* Styles for the index page, including styling for the scrollable list of books */
+
+
+.scrollable-list {
+    align-items: center;
+    width: 98%;
+    height: 80vh;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+.scrollable-list li { /* For each of the scrollable list */
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
