@@ -3,7 +3,7 @@
 
             <ul>
                 {% for book in books %}
-                    <li data-id="{{ book.item_id }}" >
+                    <li manage-data-id="{{ book.item_id }}" >
                         <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
                     </li>
                 {% endfor %}

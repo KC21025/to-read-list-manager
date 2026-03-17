@@ -7,12 +7,15 @@
                             <strong>Title - Author - Status - Progress - Rating - Date Started - Date Finished</strong>
                         </li>
                     {% for book in books %}
-                        <li>
+                        <li home-data-id="{{ book.item_id }}">
                             <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} - {{ book.pages_read }}/{{ book.total_pages }} - {{ book.rating }}/{{5}} - {{book.date_started}} - {{book.date_finished}}</strong>
                         </li>
                     {% endfor %}
                 </div>
             </ul>
+            <div id="BookDescriptionDisplay"> <!-- This div is where the book description will be displayed -->
+
+            </div>
    
         {% endblock %} <!-- Ending content block -->
    </body>

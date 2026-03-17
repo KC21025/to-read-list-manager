@@ -1,25 +1,32 @@
 const modal = document.getElementById('bookModal'); // Get modal element
-const button = document .getElementById('openModal'); // Get button element to open modal
+const button = document.getElementById('openModal'); // Get button element to open modal
 const span = document.getElementsByClassName('close')[0]; // Get span element to close modal
-const bookItems = document.querySelectorAll('li[data-id]'); // Getting all book items with data-id attribute for displaying book details
+const bookItems = document.querySelectorAll('li[manage-data-id]'); // Getting all book items with data-id attribute for displaying book details in the manage page
+const bookDescription = document.querySelectorAll('li[home-data-id]') // Getting all book items with data-id attribute for displaying book description in the home page
 
-button.onclick = function() {
-    modal.style.display = 'block'; // When button is clicked, display modal
+if (button) { // Check if button exists
+    button.onclick = function() {
+        modal.style.display = 'block'; // When button is clicked, display modal
+    }
 }
 
-span.onclick = function() {
-    modal.style.display = 'none'; // When span is cliked, hide modal
+if (span) { // Checks if span exists
+    span.onclick = function() {
+        modal.style.display = 'none'; // When span is cliked, hide modal
+    }
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none'; // When user clicks out of modal, hide modal
+if (modal) { // Checks if modal exists
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none'; // When user clicks out of modal, hide modal
+        }
     }
 }
 
 for (let item of bookItems) { // Looping through each book item, adding click event listener to display book
     item.onclick = function() { // On click
-        const bookId = this.getAttribute('data-id');
+        const bookId = this.getAttribute('manage-data-id'); // Get book ID from data-id attribute of the clicked book item
         fetch('/get_book/' + bookId) // Fetch book details from app.py using book ID from data-id attribute
             .then(response => response.json()) // Convert response to JSON
             .then(data => { // Display book details in the modal
@@ -78,3 +85,13 @@ for (let item of bookItems) { // Looping through each book item, adding click ev
             })
     }}
 
+for (let item of bookDescription) {
+    item.onclick = function() { // On click of book item in home page, display book description
+        const bookId = this.getAttribute('home-data-id'); // Gets ID from data-id attribute of the clicked book item
+        fetch('/get_book/' + bookId) // Fetch book details from app.py using book ID
+            .then(response => response.json()) // Convert response to JSON
+            .then(data => { 
+                const displayDescription = document.getElementById('BookDescriptionDisplay');
+                displayDescription.innerHTML = '<p id = "home_page_book_description"><strong>Description of ' + data.book.Title + ': </strong>'  + (data.book.Book_Description || 'No description available.') + '</p>';
+            })
+}}
