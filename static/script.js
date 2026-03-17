@@ -1,5 +1,5 @@
-const modal = document.getElementById('bookModal');
-const button = document .getElementById('openModal');
+const modal = document.getElementById('bookModal'); // Get modal element
+const button = document .getElementById('openModal'); // Get button element to open modal
 const span = document.getElementsByClassName('close')[0];
 const bookItems = document.querySelectorAll('li[data-id]'); 
 

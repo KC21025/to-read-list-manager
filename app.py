@@ -7,10 +7,10 @@ app = Flask(__name__) # Creating a Flask application
 def get_db_connection():
     conn = sqlite3.connect('database.db') # Conecting sqlite3 database
     conn.row_factory = sqlite3.Row # set row factory to sqlite3.row to access columns by name
-    return conn
+    return conn # Returns database connection
 
-@app.route('/') # Define a route for root url
-def index():
+@app.route('/') # Define a route for root url, so whenever user visits the root url, index function will be called
+def index(): # Defining a function to handle root url
     conn = get_db_connection() # Getting database connection
     try:
         books = conn.execute("SELECT Item.*, Author.Author_Name, Status.Status_Name FROM Item JOIN Author ON Item.Author_ID = Author.Author_ID JOIN Status ON Item.Status_ID = Status.Status_ID").fetchall() # Execute SQL query selecting all records from Item table
@@ -47,14 +47,14 @@ def add_book():
     
     conn = get_db_connection() # Getting database connection
     try:
-        author = conn.execute("SELECT Author_ID FROM Author WHERE Author_Name = ?", (author_name,)).fetchone()
+        author = conn.execute("SELECT Author_ID FROM Author WHERE Author_Name = ?", (author_name,)).fetchone() # Finds if Author ID already exists
 
-        if author:
+        if author: # If Author ID exists, use existing Author ID
             author_id = author['Author_ID']
-        else:
+        else: # If Author ID does not exist, insert a new Author and get the new Author ID from the last row
             cur = conn.execute("INSERT INTO Author (Author_Name) VALUES (?)", (author_name,))
             conn.commit()
-            author_id = cur.lastrowid
+            author_id = cur.lastrowid # Get the last inserted Author_ID
 
         conn.execute("INSERT INTO Item (Title, Author_ID, Status_ID, Total_Pages) VALUES (?, ?, ?, ?)", (title, author_id, status_id, total_pages)) # Execute SQL query to insert a new record into Item table
         conn.commit() # Commit the changes to the database
@@ -62,21 +62,21 @@ def add_book():
     finally:
         conn.close() # Closing the database connection
 
-@app.route('/get_book/<int:book_id>', methods=['GET'])
-def get_book(book_id):
-    conn = get_db_connection()
+@app.route('/get_book/<int:book_id>', methods=['GET']) # Define a route for get_book url with GET method and book_id as a perimeter
+def get_book(book_id): # Define a function to get a book by its ID
+    conn = get_db_connection() # Getting database connection
     try:
-        book = conn.execute("SELECT Item.*, Author.Author_Name, Status.Status_Name FROM Item JOIN Author on Item.Author_ID = Author.Author_ID JOIN Status on Item.Status_ID = Status.Status_ID Where Item.Item_ID = ?", (book_id,)).fetchone()
+        book = conn.execute("SELECT Item.*, Author.Author_Name, Status.Status_Name FROM Item JOIN Author on Item.Author_ID = Author.Author_ID JOIN Status on Item.Status_ID = Status.Status_ID Where Item.Item_ID = ?", (book_id,)).fetchone() #Execute SQL query to select all books with its ID and joins the Author and Status tables to get the author name and status name
 
-        if book:
+        if book: # If book exists, return book details as JSON response
             return flask.jsonify({'book': dict(book)})
-        else:
+        else: # If book does not exist, return error message
             return flask.jsonify({'error': 'Book not found'}), 404
     finally:
         conn.close()
 
-@app.route('/delete_book/<int:book_id>', methods=['POST'])
-def delete_book(book_id):
+@app.route('/delete_book/<int:book_id>', methods=['POST']) # Define a route for delete_book url with POST method and book_id as a perimeter
+def delete_book(book_id): # Define a function to delete a book by its ID
     conn = get_db_connection()
     try:
         conn.execute("DELETE FROM Item WHERE Item_ID = ?", (book_id,))
