@@ -5,6 +5,10 @@ body {
     overflow: hidden
 }
 
+.inline-p {
+    display: inline
+}
+
 /* Index HTML */
 /* Styles for the index page, including styling for the scrollable list of books */
 
@@ -20,4 +24,15 @@ body {
 .scrollable-list li { /* For each of the scrollable list */
     padding: 10px;
     border-bottom: 1px solid black;
+}
+
+/* Manage HTML */
+/* Styles for the manage pag */
+
+#bookList{
+    width:30%;
+    overflow-y: auto;
+    border: 2px solid black;
+    padding: 20px;
+    list-style-type: none;
 }

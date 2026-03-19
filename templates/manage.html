@@ -1,10 +1,12 @@
         {% extends "layout.html" %} <!-- Extending base layout -->
         {% block content %} <!-- Starting content block -->
+        
+            <h1>Click to edit existing books!</h1>    
 
-            <ul>
+            <ul id="bookList">
                 {% for book in books %}
                     <li manage-data-id="{{ book.item_id }}" >
-                        <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} </strong>
+                        <strong>{{book.item_id}}. {{ book.title }} by {{ book.author_name}}</strong>
                     </li>
                 {% endfor %}
             </ul>
@@ -19,11 +21,11 @@
                 <div class="modal-content">
                     <span class="close">&times;</span> <!-- To close the modal -->
                     <form action="/add_book" method="POST">
-                        <input type="text" name="title" placeholder="Title" required><br>
-                        <input type="text" name="author_name" placeholder="Author Name" required>
-                        <input type="number" name="total_pages" placeholder="Total Pages" required><br>
-                        <input type="date" name="date_started" placeholder="Date Started" required><br>
-                        <input type="text" name="description" placeholder="Book Description"><br>
+                        <p class = "inline-p">*Book Title:: </p> <input type="text" name="title" placeholder="Title" required><br>
+                        <p class = "inline-p">*Author Name: </p><input type="text" name="author_name" placeholder="Author Name" required><br>
+                        <p class = "inline-p">*Total Pages: </p><input type="number" name="total_pages" placeholder="Total Pages" required><br>
+                        <p class = "inline-p">*Date Started: </p><input type="date" name="date_started" placeholder="Date Started" required><br>
+                        <p class = "inline-p">Book Description: </p><input type="text" name="description" placeholder="Book Description"><br>
                         <button type="submit">Add Book</button>
                     </form>
                 </div>

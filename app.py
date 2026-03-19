@@ -83,16 +83,16 @@ def delete_book(book_id): # Define a function to delete a book by its ID
     conn = get_db_connection()
     try:
         author = conn.execute("SELECT Author_ID from Item WHERE Item_ID = ?", (book_id,)).fetchone()[0] # Execute SQL query to select the Author_ID from Item table where Item_ID is equal to the book_id
-        count = conn.execute("SELECT COUNT(*) From Item WHERE Author_ID = ?", (author,)).fetchall()[0][0]
+        count = conn.execute("SELECT COUNT(*) From Item WHERE Author_ID = ?", (author,)).fetchall()[0][0] # Counts how many books the Author has
 
-        if count == 1:
+        if count == 1: # If author has 1 book, then delete the author and their book
             conn.execute("DELETE FROM Author WHERE Author_ID IN (SELECT Author_ID FROM Item WHERE Item_ID = ?)", (book_id,))
             conn.execute("DELETE FROM Item WHERE Item_ID = ?", (book_id,))
-        else:
+        else: # If author has more, don't delete the author and just delete the book
             conn.execute("DELETE FROM Item WHERE Item_ID = ?", (book_id,))
 
         conn.commit()
-        return flask.jsonify({'success': True})
+        return flask.jsonify({'success': True}) # 
     finally:
         conn.close() # Closing the database connection
 
