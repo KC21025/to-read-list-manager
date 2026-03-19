@@ -5,6 +5,7 @@
 DROP TABLE IF EXISTS Item;
 DROP TABLE IF EXISTS Author;
 DROP TABLE IF EXISTS Status;
+DROP TABLE IF EXISTS Goals;
 
 /*
 -- SQL schema for a book tracking application
@@ -45,9 +46,19 @@ CREATE TABLE Item (
 );
 
 /*
+-- Created a Goal Table
+*/
+
+CREATE TABLE Goals (
+    Goal_ID INTEGER PRIMARY KEY,
+    Goal_Count INTEGER NOT NULL DEFAULT 0
+);
+
+/*
 -- Inserted some default status values for the Status table
 */
 
+INSERT INTO Goals( Goal_ID, Goal_Count) Values (1, 0);
 INSERT INTO Status (Status_ID, Status_Name) Values (1, 'Reading');
 INSERT INTO Status (Status_ID, Status_Name) Values (2, 'Completed');
 INSERT INTO Status (Status_ID, Status_Name) Values (3, 'To Read');

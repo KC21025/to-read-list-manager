@@ -34,7 +34,8 @@ def stats():
         total_books = conn.execute("SELECT COUNT(*) From Item").fetchall()[0]
         books_to_read = conn.execute("SELECT Count(Item.Status_ID) FROM Item where Status_ID = 3").fetchall()[0]
         books_reading = conn.execute("SELECT Count(Item.Status_ID) FROM Item where Status_ID = 1").fetchall()[0]
-        return render_template('stats.html', total_books=total_books, books_to_read=books_to_read, books_reading=books_reading)
+        goal = conn.execute("SELECT Goal_Count FROM Goals").fetchall()
+        return render_template('stats.html', total_books=total_books, books_to_read=books_to_read, books_reading=books_reading, goal = goal)
     finally:
         conn.close() # Closing the database connection
 
@@ -124,6 +125,21 @@ def edit_book(book_id): # Defining a function to edit the book by its ID
     finally:
         conn.close() # Closing the database connection
     
+@app.route('/get_goal', methods = ['POST'])
+def edit_goal():
+    conn = get_db_connection()
+    try:
+        new_goal = request.form['goal_count']
+        new_goal = int(new_goal)
+
+        if new_goal >= 0:
+            conn.execute("UPDATE Goals SET Goal_Count = ?", (new_goal,))
+            conn.commit()
+        else:
+            return redirect(url_for('stats'))
+        return redirect(url_for('stats'))
+    finally:
+        conn.close()
 
     
 
