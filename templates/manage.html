@@ -2,14 +2,15 @@
         {% block content %} <!-- Starting content block -->
         
             <h1>Click to edit existing books!</h1>    
-
-            <ul id="bookList">
-                {% for book in books %}
-                    <li manage-data-id="{{ book.item_id }}" >
-                        <strong>{{book.item_id}}. {{ book.title }} by {{ book.author_name}}</strong>
-                    </li>
-                {% endfor %}
-            </ul>
+            <div id = "manageBooksList">
+                <ul id="bookList">
+                    {% for book in books %}
+                        <li manage-data-id="{{ book.item_id }}" >
+                            <strong>{{book.item_id}}. {{ book.title }} by {{ book.author_name}}</strong>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
 
             <div id="bookDisplay"> <!-- This div will be used to display book details when a book is clicked -->
                 

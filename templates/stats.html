@@ -1,18 +1,22 @@
         {% extends "layout.html" %} <!-- Extending base layout -->
         {% block content %} <!-- Starting content block -->
-
-        <ul> <!-- Stats -->
-            <li>Total Books: {{ total_books[0] }}</li>
-            <li>Books to Read: {{ books_to_read[0] }}</li>
-            <li>Books Reading: {{ books_reading[0] }}</li>
-        </ul>
+        <div id = "total_books_read_section">
+            <p> Total Books Read: {{ books_read[0 ]}} </p>
+        </div>
 
         <div id = "goal_section">
-            <p> Goal: {{goal[0][0] }} Books Read </p>
             <form action = "/get_goal" id = "update_goal_form" method = "POST">
                 <p class = "inline-p">Enter a goal: </p><input type="number" name="goal_count" placeholder = "Enter a goal">
+                <p>Progress:</p>
+                <p> {{ books_read[0] }}/{{goal[0][0] }} Books Read</p>
             </form>
         </div>
+
+        <div id = "plan_reading_section">
+
+        </div>
+
+
     
         {% endblock %} <!-- Ending content block -->
    </body>

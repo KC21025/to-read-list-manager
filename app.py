@@ -31,11 +31,11 @@ def manage():
 def stats():
     conn = get_db_connection() # Getting database connection
     try:
-        total_books = conn.execute("SELECT COUNT(*) From Item").fetchall()[0]
         books_to_read = conn.execute("SELECT Count(Item.Status_ID) FROM Item where Status_ID = 3").fetchall()[0]
         books_reading = conn.execute("SELECT Count(Item.Status_ID) FROM Item where Status_ID = 1").fetchall()[0]
+        books_read = conn.execute("SELECT COUNT(Item.Status_ID) FROM Item where Status_ID = 2").fetchall()[0]
         goal = conn.execute("SELECT Goal_Count FROM Goals").fetchall()
-        return render_template('stats.html', total_books=total_books, books_to_read=books_to_read, books_reading=books_reading, goal = goal)
+        return render_template('stats.html', books_to_read=books_to_read, books_reading=books_reading, goal = goal, books_read=books_read)
     finally:
         conn.close() # Closing the database connection
 

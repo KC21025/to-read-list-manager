@@ -29,10 +29,14 @@ body {
 /* Manage HTML */
 /* Styles for the manage pag */
 
-#bookList{
+#manageBooksList {
     width:30%;
-    overflow-y: auto;
+    height: 40vh;
     border: 2px solid black;
-    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#bookList {
+    overflow-y: auto;
     list-style-type: none;
 }
