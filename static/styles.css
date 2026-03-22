@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 25px;
-    overflow: hidden
+    overflow-y: auto;
 }
 
 .inline-p {
@@ -27,7 +27,7 @@ body {
 }
 
 /* Manage HTML */
-/* Styles for the manage pag */
+/* Styles for the manage page */
 
 #manageBooksList {
     width:30%;
@@ -39,4 +39,22 @@ body {
 #bookList {
     overflow-y: auto;
     list-style-type: none;
+}
+
+/* Stats HTML */
+/* Styles for the stats page */
+#stats_page {
+    text-align: center;
+}
+
+#goal_chart {
+    border: 2px solid black;
+    width: 35vh;
+    height: 35vh;
+}
+
+#statusPieChart {
+    border: 2px solid black;
+    width: 35vh;
+    height: 35vh;
 }

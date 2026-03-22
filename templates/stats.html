@@ -1,21 +1,23 @@
         {% extends "layout.html" %} <!-- Extending base layout -->
         {% block content %} <!-- Starting content block -->
-        <div id = "total_books_read_section">
-            <p> Total Books Read: {{ books_read[0 ]}} </p>
+        <div id = "stats_page">
+            <div id = "total_books_read_section">
+                <p> Total Books Read: {{ books_read[0 ]}} </p>
+            </div>
+
+            <div id = "goal_section">
+                <form action = "/get_goal" id = "update_goal_form" method = "POST">
+                    <p class = "inline-p">Enter a goal: </p><input type="number" name="goal_count" placeholder = "Enter a goal">
+                    <p>Progress:</p>
+                    <p> {{ books_read[0] }}/{{goal[0][0] }} Books Read</p>
+                </form>
+                <canvas id = "goal_chart"> </canvas>
+            </div>
+
+            <div id = "plan_reading_section">
+                <canvas id = "statusPieChart"> </canvas>
+            </div>
         </div>
-
-        <div id = "goal_section">
-            <form action = "/get_goal" id = "update_goal_form" method = "POST">
-                <p class = "inline-p">Enter a goal: </p><input type="number" name="goal_count" placeholder = "Enter a goal">
-                <p>Progress:</p>
-                <p> {{ books_read[0] }}/{{goal[0][0] }} Books Read</p>
-            </form>
-        </div>
-
-        <div id = "plan_reading_section">
-
-        </div>
-
 
     
         {% endblock %} <!-- Ending content block -->
