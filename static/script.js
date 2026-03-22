@@ -6,7 +6,7 @@ const bookDescription = document.querySelectorAll('li[home-data-id]') // Getting
 
 if (button) { // Check if button exists
     button.onclick = function() {
-        modal.style.display = 'block'; // When button is clicked, display modal
+        modal.style.display = 'block'; // When book modal button is clicked, display modal
     }
 }
 
@@ -31,14 +31,17 @@ for (let item of bookItems) { // Looping through each book item, adding click ev
             .then(response => response.json()) // Convert response to JSON
             .then(data => { // Display book details in the modal
                 const display = document.getElementById('bookDisplay');
+                const displayEditForm = document.getElementById('editDisplay');
+                displayEditForm.style.display = 'block';
 
                 display.innerHTML = '<h2>' + data.book.Title + '</h2>' +
                     '<p><strong>Author:</strong> ' + data.book.Author_Name + '</p>' +
                     '<p><strong>Status:</strong> ' + data.book.Status_Name + '</p>' +
                     '<p><strong>Progress:</strong> ' + data.book.Pages_Read + '/' + data.book.Total_Pages + ' pages</p>' +
-                    '<p><strong>Rating:</strong>' + data.book.Rating + '/' + '5</p>' + 
-                    '<button id="editBtn">Edit</button>' +
+                    '<p><strong>Rating:</strong>' + data.book.Rating + '/' + '5</p>'
                     // Form for editing book details, prefilled with current book details, and button to submit the form to edit_book route in app.py with book ID as a parameter
+                displayEditForm.innerHTML = 
+                    '<button id="editBtn">Edit</button>' + 
                     '<div id="editForm" style="display:none;">' + 
                     '<span class="closeEditForm">&times;</span>' +
                     '<form id="editBookForm" method="POST" action="/edit_book/' + bookId + '">' + '<p class = "inline-p"> *Book Title: </p>' +

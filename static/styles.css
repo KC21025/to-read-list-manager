@@ -28,6 +28,30 @@ body {
 
 /* Manage HTML */
 /* Styles for the manage page */
+#editDisplay {
+    margin: 20px;
+    width: 30vh;
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+#editBtn {
+    margin-right:10px;
+}
+
+#deleteBtn {
+    color: black;
+}
+
+
+#bookDisplay {
+    margin: 20px;
+    text-align: center;
+    width:25vh;
+    height:25vh;
+    border: 2px solid black;
+}
 
 #manageBooksList {
     width:30%;
