@@ -14,7 +14,7 @@ body {
 
 
 .scrollable-list {
-    align-items: center;
+    text-align: center;
     width: 98%;
     height: 60vh;
     overflow-y: auto;
@@ -44,13 +44,16 @@ body {
 /* Stats HTML */
 /* Styles for the stats page */
 #stats_page {
-    text-align: center;
+    text-align:center;
 }
 
-#goal_chart {
-    border: 2px solid black;
-    width: 35vh;
+#goalChartContainer {
+    margin: 20px;
+    border: 2px black solid;
+    margin-left: auto;
+    margin-right: auto;
     height: 35vh;
+    width: 35vh;
 }
 
 #statusPieChart {

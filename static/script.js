@@ -95,3 +95,30 @@ for (let item of bookDescription) {
                 displayDescription.innerHTML = '<p id = "home_page_book_description"><strong>Description of ' + data.book.Title + ': </strong>'  + (data.book.Book_Description || 'No description available.') + '</p>';
             })
 }}
+
+
+const goalCanvas = document.getElementById('goal_chart'); // Gets the goal chart
+if (goalCanvas) { // If goal chart exists
+    const readCount = goalCanvas.getAttribute('data-read'); // Gets book read count
+    const goalCount = goalCanvas.getAttribute('data-goal'); // Gets goal count
+    
+    new Chart(goalCanvas, {
+        type: 'bar',
+        data: {
+            labels: ['Books Read', 'Goal'],
+            datasets: [{
+                label: 'Reading progress',
+                data: [readCount, goalCount],
+                backgroundColor: ['#36a2eb', '#3df500']
+            }]
+        },
+     options: {
+            responsive: true, // So it can shrink when window shrinks
+            maintainAspectRatio: false, // To fit inside the div
+            scales: {
+                y: { beginAtZero: true } // Ensures the chart starts at 0
+            }
+        }
+    });
+}
+
