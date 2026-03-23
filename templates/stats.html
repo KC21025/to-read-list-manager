@@ -12,13 +12,14 @@
                     <p> {{ books_read[0] }}/{{goal[0][0] }} Books Read</p>
                 </form>
                 <div id = "goalChartContainer"> 
-                    <canvas id = "goal_chart"data-read = "{{ books_read[0] }}" data-goal = "{{goal[0][0]}}">
+                    <canvas id = "goal_chart" data-read = "{{ books_read[0] }}" data-goal = "{{goal[0][0]}}">
                     </canvas>
                 </div>
             </div>
 
             <div id = "plan_reading_section">
-                <canvas id = "statusPieChart"> </canvas>
+                <canvas id = "statusPieChart" data-to-read = "{{ books_to_read[0] }}" data-reading = "{{ books_reading[0] }}" data-completed = "{{ books_read[0] }}">
+                </canvas>
             </div>
         </div>
 

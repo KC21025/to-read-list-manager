@@ -40,7 +40,7 @@ CREATE TABLE Item (
     Pages_Read INTEGER CHECK (Pages_Read >= 0 AND Pages_Read <= Total_Pages) DEFAULT 0,
     Date_Started DATE,
     Date_Finished DATE DEFAULT (NULL),
-    Rating INTEGER CHECK (Rating >= 0 AND Rating <= 5) DEFAULT 0,
+    Rating INTEGER CHECK (Rating >= 0 AND Rating <= 5) DEFAULT 0, -- Default is 0 Rating
     FOREIGN KEY (Author_ID) REFERENCES Author(Author_ID),
     FOREIGN KEY (Status_ID) REFERENCES Status(Status_ID)
 );
