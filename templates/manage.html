@@ -25,7 +25,7 @@
             <div id="bookModal" class="modal" style="display: none;">  <!-- Modal content-->
                 <div class="modal-content">
                     <span class="close">&times;</span> <!-- To close the modal -->
-                    <form action="/add_book" method="POST">
+                    <form id = "AddBookForm" action="/add_book" method="POST">
                         <p class = "inline-p">*Book Title:: </p> <input type="text" name="title" placeholder="Title" required><br>
                         <p class = "inline-p">*Author Name: </p><input type="text" name="author_name" placeholder="Author Name" required><br>
                         <p class = "inline-p">*Total Pages: </p><input type="number" name="total_pages" placeholder="Total Pages" required><br>

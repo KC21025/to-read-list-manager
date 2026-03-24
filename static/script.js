@@ -66,12 +66,22 @@ for (let item of bookItems) { // Looping through each book item, adding click ev
                     editBookForm.onsubmit = function(event) { // When form is submitted
                         const pagesRead = parseInt(editBookForm.pages_read.value); // Checks pages read value
                         const totalPages = parseInt(editBookForm.total_pages.value); // Checks total pages value
+                        const dateStarted = new Date(editBookForm.date_started.value);
+                        const dateFinished = new Date(editBookForm.date_finished.value);
 
                         if (pagesRead > totalPages ) {
                             alert ("Error: Pages read cannot be more than total pages!");
                             event.preventDefault(); // Prevents form from submitting
                             return false;
                         }
+
+                        if (editBookForm.date_finished.value && dateFinished < dateStarted) {
+                            alert ("Error: You can't start the book after you have finished it");
+                            event.preventDefault();
+                            return false;
+                        }
+                    
+            
                     }
 
                 const deleteButton = document.getElementById("deleteBtn");
@@ -163,3 +173,13 @@ if (toReadCanvas) {
     });
 }
 
+const addButtonForm = document.getElementById('AddBookForm');
+                addButtonForm.onsubmit = function(event) {
+                    const total_pages = parseInt(addButtonForm.total_pages.value);
+
+                    if (total_pages <= 0) {
+                        alert ("Error: Total pages cannot be less than 0 or equal to 0")
+                        event.preventDefault()
+                        return false;
+                    }
+                }
