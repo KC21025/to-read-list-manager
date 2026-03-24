@@ -62,6 +62,18 @@ for (let item of bookItems) { // Looping through each book item, adding click ev
                     '<button type="submit">Save Changes</button></form></div>' +
                     '<button id="deleteBtn">Delete</button>';
 
+                    const editBookForm = document.getElementById('editBookForm'); // Sets a variable to get the editBookForm
+                    editBookForm.onsubmit = function(event) { // When form is submitted
+                        const pagesRead = parseInt(editBookForm.pages_read.value); // Checks pages read value
+                        const totalPages = parseInt(editBookForm.total_pages.value); // Checks total pages value
+
+                        if (pagesRead > totalPages ) {
+                            alert ("Error: Pages read cannot be more than total pages!");
+                            event.preventDefault(); // Prevents form from submitting
+                            return false;
+                        }
+                    }
+
                 const deleteButton = document.getElementById("deleteBtn");
                 deleteButton.onclick = function() { // On click of delete button, delete and POST request to delete_book route in app.py with book ID as parameter, and confirm before deletion
                     if (confirm("Are you sure you want to delete this book?")) {
