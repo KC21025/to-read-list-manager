@@ -10,10 +10,14 @@
 
     <body>
         <nav class = "web_nav_bar" > <!-- Navigation bar -->
-            <p> Book Log </p>
-            <a href="/">Home</a> 
-            <a href="/manage">Manage Books</a>
-            <a href="/stats">Stats</a>
+            <div class = "nav_header">
+                <p class = "inline-p"><b><a href="/">Book Log</a></b></p>
+            </div>
+            <div class = "nav_links">
+                <a href="/">Home</a> 
+                <a href="/manage">Manage Books</a>
+                <a href="/stats">Stats</a>
+            </div>
         </nav>
 
         {% block content %}

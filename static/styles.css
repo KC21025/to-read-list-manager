@@ -1,7 +1,6 @@
 /* Styles for the body */
 body {
     margin: 0;
-    padding: 25px;
     overflow-y: auto;
 }
 
@@ -11,7 +10,53 @@ body {
 
 /* Styles for the navigation bar */
 .web_nav_bar {
-    
+    width: 98%;
+    height: 5vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    padding: 10px 20px;
+}
+
+.nav_header p {
+    font-size: 32px;
+}
+
+.nav_header a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 2px 3px black;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav_header a:hover {
+    color: darkgray;
+    text-shadow: 2px 4px 5px black;
+}
+
+.nav_links {
+    margin-right: 10%;
+    display: flex;
+    gap: 40px;
+}
+
+.nav_links a {
+    font-size: 18px;
+    box-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav_links a:hover{
+    box-shadow: 1px 3px 5px black;
+    color: rgb(255, 255, 255);
+    background-color: darkgrey;
 }
 
 /* Index HTML */
@@ -59,6 +104,7 @@ body {
 }
 
 #manageBooksList {
+    margin: 20px;
     width:30%;
     height: 40vh;
     border: 2px solid black;
