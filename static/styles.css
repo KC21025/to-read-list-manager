@@ -1,21 +1,27 @@
-/* Styles for the body */
+/* Styles for the body and in general*/
+p, h1, h2, h3, h4, h5, h6, li, ul, a, th, td{
+    font-family: google-sans, sans-serif;
+}
+
 body {
     margin: 0;
     overflow-y: auto;
+    background-color: #f8f9fa;
 }
 
 .inline-p {
     display: inline
 }
 
+
 /* Styles for the navigation bar */
 .web_nav_bar {
-    width: 98%;
+    width: 97.9vw;
     height: 5vh;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    background-color: gray;
+    background-color: rgb(128, 128, 128);
     padding: 10px 20px;
 }
 
@@ -61,19 +67,72 @@ body {
 
 /* Index HTML */
 /* Styles for the index page, including styling for the scrollable list of books */
-
-
-.scrollable-list {
-    text-align: center;
-    width: 98%;
-    height: 60vh;
-    overflow-y: auto;
-    border: 1px solid black;
+.book-list-container {
+    display: flex;
+    justify-content: center;
 }
 
-.scrollable-list li { /* For each of the scrollable list */
-    padding: 10px;
-    border-bottom: 1px solid black;
+.header-row {
+    background-color: rgb(152, 152, 152);
+}
+
+.scrollable-list {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    height: 70vh;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+
+.book-table {
+    border-collapse: collapse;
+}
+
+.book-table th{
+    font-size: 18px;
+    background-color: rgb(146, 146, 146);
+    color: rgb(232, 232, 232);
+    padding: 15px;
+    border: 1px solid rgb(131, 131, 131);
+    text-shadow: 1px 1px 2px black;
+}
+
+.book-table td{
+    padding: 13px;
+    border: 1px solid rgb(142, 142, 142);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.book-table td:hover {
+    color: rgb(83, 83, 83);
+    cursor: pointer;
+    text-shadow: 1px 1px 1px black;
+}
+
+#BookDescriptionDisplay {
+    background-color: lightgray;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 30vh;
+    height: 10vh;
+    overflow-y: auto;
+    margin: auto;
+    border: 2px solid black;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#BookDescriptionDisplay:hover{
+    cursor: pointer;
+    color: rgb(68, 68, 68);
+    box-shadow: 5px 5px 5px black;
+}
+
+.tiny-p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vh;
+    font-size: 80%;
 }
 
 /* Manage HTML */
@@ -98,14 +157,14 @@ body {
 #bookDisplay {
     margin: 20px;
     text-align: center;
-    width:25vh;
+    width:25vw;
     height:25vh;
     border: 2px solid black;
 }
 
 #manageBooksList {
     margin: 20px;
-    width:30%;
+    width:30vw;
     height: 40vh;
     border: 2px solid black;
     margin-bottom: 20px;
@@ -128,7 +187,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     height: 35vh;
-    width: 35vh;
+    width: 35vw;
 }
 
 #statusPieChart {
@@ -136,5 +195,5 @@ body {
     margin-left: auto;
     margin-right: auto;
     height: 35vh;
-    width: 35vh;
+    width: 35vw;
 }

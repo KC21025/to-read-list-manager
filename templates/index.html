@@ -2,21 +2,41 @@
         {% block content %} <!-- Starting content block -->
  
             <ul> <!-- Displays book list -->
-                <div class="scrollable-list">
-                        <li>
-                            <strong>Title - Author - Status - Progress - Rating - Date Started - Date Finished</strong>
-                        </li>
-                    {% for book in books %}
-                        <li home-data-id="{{ book.item_id }}">
-                            <strong>{{ book.title }} by {{ book.author_name}} - {{ book.status_name }} - {{ book.pages_read }}/{{ book.total_pages }} - {{ book.rating }}/{{5}} - {{book.date_started}} - {{book.date_finished}}</strong>
-                        </li>
-                    {% endfor %}
+                <div class = "book-list-container">
+                    <div class="scrollable-list">
+                        <table class= "book-table" >
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                                <th>Rating</th>
+                                <th>Date Started</th>
+                                <th>Date Finished</th>
+                            </tr>
+                            {% for book in books %}
+                                <tr>
+                                    <td home-data-id="{{ book.item_id }}"> {{book.title}} </td>
+                                    <td home-data-id="{{ book.item_id }}"> {{book.author_name}} </td>
+                                    <td home-data-id="{{ book.item_id }}"> {{book.status_name}} </td>
+                                    <td home-data-id="{{ book.item_id }}"> {{book.pages_read}}/{{book.total_pages}} </td>
+                                    <td home-data-id="{{ book.item_id }}"> {{book.rating}} </td>
+                                    <td home-data-id="{{ book.item_id }}"> {{book.date_started}} </td>
+                                   <td home-data-id="{{ book.item_id }}"> {{book.date_finished}} </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
                 </div>
             </ul>
-            <div id="BookDescriptionDisplay"> <!-- This div is where the book description will be displayed -->
+            <div class = "book-description-container">
+                <div id="BookDescriptionDisplay"> <!-- This div is where the book description will be displayed -->
 
+                </div>
+                <p class = "tiny-p">
+                    *Click on a book's title, author, status, progress, rating, or dates to view its description.
+                </p>
             </div>
-   
         {% endblock %} <!-- Ending content block -->
    </body>
 </html>
