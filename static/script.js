@@ -1,7 +1,7 @@
 const modal = document.getElementById('bookModal'); // Get modal element
 const button = document.getElementById('openModal'); // Get button element to open modal
 const span = document.getElementsByClassName('close')[0]; // Get span element to close modal
-const bookItems = document.querySelectorAll('li[manage-data-id]'); // Getting all book items with data-id attribute for displaying book details in the manage page
+const bookItems = document.querySelectorAll('td[manage-data-id]'); // Getting all book items with data-id attribute for displaying book details in the manage page
 const bookDescription = document.querySelectorAll('td[home-data-id]') // Getting all book items with data-id attribute for displaying book description in the home page
 
 if (button) { // Check if button exists

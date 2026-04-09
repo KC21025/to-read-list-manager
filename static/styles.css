@@ -152,29 +152,10 @@ body {
 
 /* Manage HTML */
 /* Styles for the manage page */
-#editDisplay {
-    margin: 20px;
-    width: 30vh;
-    text-align: center;
-    border: 2px solid black;
-    padding: 20px;
-}
-
-#editBtn {
-    margin-right:10px;
-}
-
-#deleteBtn {
-    color: black;
-}
-
-
-#bookDisplay {
-    margin: 20px;
-    text-align: center;
-    width:25vw;
-    height:25vh;
-    border: 2px solid black;
+.manage-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #manageBooksList {
@@ -187,8 +168,82 @@ body {
 }
 
 #bookList {
-    list-style-type: none;
+    border-collapse: collapse;
+    width: 30vw;
 }
+
+
+#bookList th {
+    font-size: 18px;
+    background-color: rgb(146, 146, 146);
+    color: rgb(232, 232, 232);
+    padding: 15px;
+    border: 1px solid rgb(131, 131, 131);
+    text-shadow: 1px 1px 2px black;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+}
+
+#bookList td {
+    background-color: rgb(217, 217, 217);
+    padding: 13px;
+    border: 1px solid rgb(142, 142, 142);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#bookList td:hover {
+    color: rgb(83, 83, 83);
+    cursor: pointer;
+    text-shadow: 1px 1px 1px black;
+}
+
+.header_book_display {
+    text-align: center;
+}
+
+.manage-display-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bookDisplay {
+    background-color: rgb(217, 217, 217);
+    overflow-y: auto;
+    margin: 20px;
+    text-align: center;
+    width: 15vw;
+    height:25vh;
+    border: 2px solid black;
+}
+
+
+#editDisplay {
+    margin: 20px;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+
+.manage-add-book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#editBtn {
+    margin-right:10px;
+}
+
+#deleteBtn {
+    color: black;
+}
+
 
 /* Stats HTML */
 /* Styles for the stats page */
