@@ -206,6 +206,8 @@ body {
     display:flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 #bookDisplay {
@@ -214,8 +216,9 @@ body {
     margin: 20px;
     text-align: center;
     width: 15vw;
-    height:25vh;
+    height: 22vh;
     border: 2px solid black;
+    border-radius: 12px;
 }
 
 
@@ -226,18 +229,99 @@ body {
 }
 
 #editBtn {
-    margin-right:10px;
-}
-
-#editBookForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 10px;
+    padding: 12px 16px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 1px 2px 3px black;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
 }
 
 #deleteBtn {
-    color: black;
+    margin: 10px;
+    padding: 12px 16px;
+    background-color: rgb(230, 173, 173);
+    border: none;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 1px 2px 3px black;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
 }
+
+#editBtn:hover {
+    cursor: pointer;
+    color: rgb(89, 89, 89);
+    box-shadow: 2px 4px 5px black;
+}
+
+#deleteBtn:hover {
+    cursor: pointer;
+    color: rgb(86, 0, 0);
+    box-shadow: 2px 4px 5px black;
+}
+
+#editForm {
+    overflow-y: auto;
+    width: 15vw;
+    height: 40vh;
+    background-color: lightgray;
+    border-radius: 12px;
+    border: 1px solid black;
+    width: 15vw;
+    padding: 15px;
+}
+
+
+#editBookForm {
+    text-align: center;
+}
+
+.closeEditForm {
+    float: right;
+    top: 0;
+    position: sticky;
+}
+
+.closeEditForm:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#editBookForm input{
+    margin: 10px;
+}
+
+#editBookForm select{
+    margin: 10px;
+}
+
+#editBookForm p{
+    font-family: google-sans, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#editBookForm button {
+    font-family: google-sans, sans-serif;
+    background-color: lightgreen;
+    padding: 10px 18px;
+    border-radius: 24px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 1px 2px 3px black;
+    transition: box-shadow 0.3s ease;
+}
+
+#editBookForm button:hover {
+    cursor: pointer;
+    box-shadow: 2px 4px 5px black;
+}
+
 
 .manage-add-book-container {
     display: flex;
@@ -269,23 +353,43 @@ body {
     height: 40vh;
     margin: 20px;
     background-color: lightgray;
-    border: 2px solid black; 
+    border: 1px solid black; 
+    border-radius: 12px;
     padding: 15px;
 }
 
 
 #AddBookForm {
     padding: 20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
 }
 
 #AddBookForm p {
     font-family: google-sans, sans-serif;
     font-weight: bold;
     font-size: 18px;
+}
+
+#AddBookForm input {
+    font-family: google-sans, sans-serif;
+    margin: 20px;
+}
+
+#AddBookForm button {
+    font-family: google-sans, sans-serif;
+    background-color: lightgreen;
+    padding: 10px 18px;
+    border-radius: 24px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 1px 2px 3px black;
+    transition: box-shadow 0.3s ease;
+}
+
+#AddBookForm button:hover {
+    cursor: pointer;
+    box-shadow: 2px 4px 5px black;
 }
 
 .close {

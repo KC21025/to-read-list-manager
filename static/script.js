@@ -43,7 +43,7 @@ for (let item of bookItems) { // Looping through each book item, adding click ev
                 displayEditForm.innerHTML = 
                     '<button id="editBtn">Edit</button>' + 
                     '<div id="editForm" style="display:none;">' + 
-                    '<span class="closeEditForm">&times;</span>' +
+                    '<span class="closeEditForm">X</span>' +
                     '<form id="editBookForm" method="POST" action="/edit_book/' + bookId + '">' + '<p class = "inline-p"> *Book Title: </p>' +
                     '<input type="text" name="title" placeholder="Title" value="' + data.book.Title + '" required><br>' + '<p class = "inline-p"> *Author Name: </p>' +
                     '<input type="text" name="author" placeholder="Author" value="' + data.book.Author_Name + '" required><br>' + '<p class = "inline-p"> *Status: </p>' +
