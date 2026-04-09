@@ -31,13 +31,12 @@
 </div>
 
 <div class="manage-add-book-container">
-    <button id="openModal">Add New Book</button> <!-- Button to open modal to add a new book -->
 
     <div id="bookModal" class="modal" style="display: none;"> <!-- Modal content-->
         <div class="modal-content">
-            <span class="close">&times;</span> <!-- To close the modal -->
+            <span class="close">X</span> <!-- To close the modal -->
             <form id="AddBookForm" action="/add_book" method="POST">
-                <p class="inline-p">*Book Title:: </p> <input type="text" name="title" placeholder="Title" required><br>
+                <p class="inline-p">*Book Title: </p> <input type="text" name="title" placeholder="Title" required><br>
                 <p class="inline-p">*Author Name: </p><input type="text" name="author_name" placeholder="Author Name"
                     required><br>
                 <p class="inline-p">*Total Pages: </p><input type="number" name="total_pages" placeholder="Total Pages"
@@ -50,6 +49,7 @@
             </form>
         </div>
     </div>
+    <button id="openModal">Add New Book</button> <!-- Button to open modal to add a new book -->
 </div>
 
 {% endblock %} <!-- Ending content block -->
