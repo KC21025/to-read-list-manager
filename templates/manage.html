@@ -1,6 +1,26 @@
 {% extends "layout.html" %} <!-- Extending base layout -->
 {% block content %} <!-- Starting content block -->
+<div class="manage-add-book-container">
 
+    <div id="bookModal" class="modal" style="display: none;"> <!-- Modal content-->
+        <div class="modal-content">
+            <span class="close">X</span> <!-- To close the modal -->
+            <form id="AddBookForm" action="/add_book" method="POST">
+                <p class="inline-p">*Book Title: </p> <input type="text" name="title" placeholder="Title" required><br>
+                <p class="inline-p">*Author Name: </p><input type="text" name="author_name" placeholder="Author Name"
+                    required><br>
+                <p class="inline-p">*Total Pages: </p><input type="number" name="total_pages" placeholder="Total Pages"
+                    required><br>
+                <p class="inline-p">*Date Started: </p><input type="date" name="date_started" placeholder="Date Started"
+                    required><br>
+                <p class="inline-p">Book Description: </p><input type="text" name="description"
+                    placeholder="Book Description"><br>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+    </div>
+    <button id="openModal">Add New Book</button> <!-- Button to open modal to add a new book -->
+</div>
 <div class="manage-content-container">
     <h1 class="manage-header-one">Click to edit existing books!</h1>
 
@@ -30,27 +50,6 @@
     </div>
 </div>
 
-<div class="manage-add-book-container">
-
-    <div id="bookModal" class="modal" style="display: none;"> <!-- Modal content-->
-        <div class="modal-content">
-            <span class="close">X</span> <!-- To close the modal -->
-            <form id="AddBookForm" action="/add_book" method="POST">
-                <p class="inline-p">*Book Title: </p> <input type="text" name="title" placeholder="Title" required><br>
-                <p class="inline-p">*Author Name: </p><input type="text" name="author_name" placeholder="Author Name"
-                    required><br>
-                <p class="inline-p">*Total Pages: </p><input type="number" name="total_pages" placeholder="Total Pages"
-                    required><br>
-                <p class="inline-p">*Date Started: </p><input type="date" name="date_started" placeholder="Date Started"
-                    required><br>
-                <p class="inline-p">Book Description: </p><input type="text" name="description"
-                    placeholder="Book Description"><br>
-                <button type="submit">Add Book</button>
-            </form>
-        </div>
-    </div>
-    <button id="openModal">Add New Book</button> <!-- Button to open modal to add a new book -->
-</div>
 
 {% endblock %} <!-- Ending content block -->
 </body>
