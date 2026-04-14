@@ -424,6 +424,7 @@ body {
     margin-right: auto;
     background-color: lightgray;
     border-radius: 20px;
+    overflow-y: auto;
 }
 
 #goal_section p{
