@@ -9,13 +9,13 @@
                 <form action = "/get_goal" id = "update_goal_form" method = "POST">
                     <p class = "inline-p">Enter a goal: </p><input type="number" name="goal_count" placeholder = "Enter a goal">
                     <button type="submit">Update Goal</button>
-                    <p>Progress:</p>
-                    <p> {{ books_read[0] }}/{{goal[0][0] }} Books Read</p>
+                    <h1>Progress: {{ books_read[0] }}/{{goal[0][0] }} Books Read </h1>
                 </form>
-                <div id = "goalChartContainer"> 
+            </div>
+
+             <div id = "goalChartContainer"> 
                     <canvas id = "goal_chart" data-read = "{{ books_read[0] }}" data-goal = "{{goal[0][0]}}">
                     </canvas>
-                </div>
             </div>
 
             <div id = "plan_reading_section">

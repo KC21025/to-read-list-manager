@@ -143,37 +143,68 @@ if (goalCanvas) { // If goal chart exists
         options: {
             responsive: true, // So it can shrink when window shrinks
             maintainAspectRatio: false, // To fit inside the div
+            plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: {
+                                size: 18,
+                                weight: 'bold',
+                                color: '#000000'
+                            }
+                        }
+                    }
+                },
             scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                            color: '#000000'
+                        }
+                    }
+                },
                 y: { beginAtZero: true } // Ensures the chart starts at 0
             }
+            
         }
     });
 }
 
 const toReadCanvas = document.getElementById('statusPieChart'); // Gets status pie chart
-if (toReadCanvas) {
-    const toReadCount = parseInt(toReadCanvas.getAttribute('data-to-read')); // Gets to read count
-    const readingCount = parseInt(toReadCanvas.getAttribute('data-reading')); // Gets reading count
-    const completedCount = parseInt(toReadCanvas.getAttribute('data-completed')); // Gets completed count
+    if (toReadCanvas) {
+        const toReadCount = parseInt(toReadCanvas.getAttribute('data-to-read')); // Gets to read count
+        const readingCount = parseInt(toReadCanvas.getAttribute('data-reading')); // Gets reading count
+        const completedCount = parseInt(toReadCanvas.getAttribute('data-completed')); // Gets completed count
 
-    new Chart(toReadCanvas, {
-        type: 'pie',
-        data: {
-            labels: ['To Read', 'Reading', 'Completed'],
-            datasets: [{
-                label: 'Reading progress',
-                data: [toReadCount, readingCount, completedCount],
-                backgroundColor: ['#36a2eb', '#3df500', '#ff6384']
-            }]
-        },
-        options: {
-            responsive: true, // So it can shrink when window shrinks
-            maintainAspectRatio: false, // To fit inside the div
-            legend: {
-                position: 'top',
+        new Chart(toReadCanvas, {
+            type: 'pie',
+            data: {
+                labels: ['To Read', 'Reading', 'Completed'],
+                datasets: [{
+                    label: 'Reading progress',
+                    data: [toReadCount, readingCount, completedCount],
+                    backgroundColor: ['#36a2eb', '#3df500', '#ff6384']
+                }]
+            },
+            options: {
+                responsive: true, // So it can shrink when window shrinks
+                maintainAspectRatio: false, // To fit inside the div
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: {
+                                size: 18,
+                                weight: 'bold',
+                                color: '#000000'
+                            }
+                        }
+                    }
+                }
             }
-        }
-    });
+        });
 }
 
 const addButtonForm = document.getElementById('AddBookForm');

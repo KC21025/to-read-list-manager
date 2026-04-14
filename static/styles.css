@@ -404,8 +404,51 @@ body {
 
 /* Stats HTML */
 /* Styles for the stats page */
+
 #stats_page {
     text-align:center;
+    margin: 20px;
+}
+
+#total_books_read_section {
+    font-family: google-sans, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#goal_section {
+    border: 2px solid black;
+    width: 30vw;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+#goal_section p{
+   font-weight: bold;
+   font-size: 20px;
+}
+
+#goal_section input {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#goal_section button{
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+    transition: box-shadow 0.3s ease;
+}
+
+#goal_section button:hover{
+    cursor: pointer;
+    box-shadow: 2px 3px 4px black;
 }
 
 #goalChartContainer {
@@ -415,6 +458,8 @@ body {
     margin-right: auto;
     height: 35vh;
     width: 35vw;
+    border-radius: 20px;
+    background-color: lightgray;
 }
 
 #statusPieChart {
@@ -423,4 +468,6 @@ body {
     margin-right: auto;
     height: 35vh;
     width: 35vw;
+    border-radius: 20px;
+    background-color: lightgray;
 }
