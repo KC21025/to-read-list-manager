@@ -13,7 +13,6 @@ body {
     display: inline
 }
 
-
 /* Styles for the navigation bar */
 .web_nav_bar {
     width: 97.9vw;
@@ -330,7 +329,7 @@ body {
 }
 
 #openModal {
-    background-color: lightgreen;
+    background-color: rgb(212, 212, 212);
     padding: 12px 24px;
     border: none;
     border-radius: 20px;

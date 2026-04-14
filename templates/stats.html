@@ -8,6 +8,7 @@
             <div id = "goal_section">
                 <form action = "/get_goal" id = "update_goal_form" method = "POST">
                     <p class = "inline-p">Enter a goal: </p><input type="number" name="goal_count" placeholder = "Enter a goal">
+                    <button type="submit">Update Goal</button>
                     <p>Progress:</p>
                     <p> {{ books_read[0] }}/{{goal[0][0] }} Books Read</p>
                 </form>
