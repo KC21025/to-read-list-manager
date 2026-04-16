@@ -64,6 +64,11 @@ body {
     background-color: darkgrey;
 }
 
+.nav_links a.active {
+    background-color: #a7a6a6;
+    color: white
+}
+
 /* Index HTML */
 /* Styles for the index page, including styling for the scrollable list of books */
 .main-content-index {
