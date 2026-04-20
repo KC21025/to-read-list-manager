@@ -1,4 +1,11 @@
 /*
+-- SQL schema for a Book Tracker Website
+-- Author: Kian Castro
+-- File: schema.sql
+-- Date: April 2026
+*/
+
+/*
 -- Drops tables if they already exist to avoid errors when running the database setup multiple times
 */
 

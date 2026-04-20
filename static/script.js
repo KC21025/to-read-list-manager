@@ -1,3 +1,10 @@
+//
+// Javascript for Book Tracker Website
+// Author: Kian Castro
+// File: script.js
+// Date: April 2026
+//
+
 const modal = document.getElementById('bookModal'); // Get modal element
 const button = document.getElementById('openModal'); // Get button element to open modal
 const span = document.getElementsByClassName('close')[0]; // Get span element to close modal

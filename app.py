@@ -1,3 +1,8 @@
+# App for the Book Tracker Website
+# Author: Kian Castro
+# File: app.py
+# Date: April 2026
+
 import sqlite3 # Import sqlite3 module 
 import flask # Import Flask 
 from flask import Flask, render_template, request, redirect, url_for # import Flask and render_template from flask

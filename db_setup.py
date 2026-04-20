@@ -1,3 +1,8 @@
+# Database setup for the Book Tracker Website
+# Author: Kian Castro
+# File: db_setup.py
+# Date: April 2026
+
 # Imported sqlite3
 import sqlite3
 
