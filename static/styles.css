@@ -25,6 +25,10 @@ body {
 
 /* Styles for the navigation bar */
 .web_nav_bar {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
     width: 97.9vw;
     height: 5vh;
     display:flex;
@@ -90,7 +94,7 @@ body {
 }
 
 .book-list-container {
-
+    margin-top: 70px;
     display: flex;
     justify-content: center;
 }
@@ -426,6 +430,7 @@ body {
 }
 
 #total_books_read_section {
+    margin-top: 90px;
     font-family: google-sans, sans-serif;
     font-size: 40px;
     font-weight: bold;
