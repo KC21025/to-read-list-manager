@@ -29,7 +29,7 @@ body {
     top:0;
     left: 0;
     z-index: 1000;
-    width: 97.9vw;
+    width: 100%;
     height: 5vh;
     display:flex;
     align-items: center;
@@ -81,6 +81,10 @@ body {
 .nav_links a.active {
     background-color: #a7a6a6;
     color: white
+}
+
+@media screen and (max-width: 600px) {
+    
 }
 
 /* Index HTML */
