@@ -84,7 +84,106 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    /* Responsive styling for smaller or mobile screens */
+    /* Navigation Bar */
+    .web_nav_bar {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav_header p {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .nav_links {
+        margin-right: 0;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav_links a {
+        font-size: 14px;
+        padding: 8px 16px;
+    } 
+
+    /* Main Content of Index HTML */
+    .main-content-index {
+        padding-top: 3vh;
+    }
+
+    .scrollable-list {
+        width: 90vw;
+    }
+
+    .book-table th{
+        font-size: 14px !important;
+        padding: 15px;
+    }
+
+    .book-table td{
+        font-size: 12px !important;
+        padding: 7px;
+    }
     
+    /* Manage HTML */
+    .manage-header-one {
+        font-size: 7vw;
+    }
+
+   #manageBooksList, #bookList, .modal-content, #editForm, #bookDisplay {
+        width: 90vw !important; /* !important overrides any other width settings */
+        height: auto;
+        max-height: 50vh;
+    }
+
+    #manageBooksList {
+        overflow-x: auto;
+    }
+
+    #bookList th, #bookList td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #editDisplay {
+        flex-direction: column;
+    }
+
+    .manage-add-book-container {
+        margin-top: 10vh !important;
+    }
+
+    #openModal {
+        padding: 8px 20px !important;
+        font-size: 18px !important;
+    }
+
+    .modal-content {
+        width: 80vw !important;
+        height: 40vh !important;
+        padding: 7px !important;
+    }
+    
+    #editForm {
+        width: 80vw !important; 
+        height: 40vh !important;
+        padding: 7px !important;
+    }
+
+    /* Stats HTML */
+    
+    #goal_section, #goalChartContainer, #statusPieChart {
+        width: 80vw !important;
+        height: 40vh;
+    }
+
+    #goal_section {
+        padding: 10px !important;
+        height: auto !important;
+    }
 }
 
 /* Index HTML */
@@ -346,6 +445,7 @@ body {
 
 
 .manage-add-book-container {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
